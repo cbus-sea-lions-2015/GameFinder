@@ -7,7 +7,7 @@ class CreateGames < ActiveRecord::Migration
       t.integer :maxplaytime
       t.integer :minplayers
       t.integer :maxplayers
-      t.column :poll, :json
+      t.text :poll
       t.string :image_url
       t.string :thumbnail_url
       t.string :bgg_id, null: false
