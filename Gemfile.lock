@@ -42,6 +42,9 @@ GEM
       execjs
       json
     bcrypt (3.1.10)
+    bgg-api (0.0.2)
+      httparty
+      xml-simple
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.2.0.1)
@@ -88,6 +91,9 @@ GEM
     hitimes (1.2.2)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
+    httparty (0.13.3)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.7.0)
     ionic-rails-engine (0.9.99.11)
       railties (>= 3.2)
@@ -114,6 +120,7 @@ GEM
     mini_portile (0.6.2)
     minitest (5.6.0)
     multi_json (1.11.0)
+    multi_xml (0.5.5)
     netrc (0.10.3)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
@@ -232,6 +239,7 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
+    xml-simple (1.1.5)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -242,6 +250,7 @@ DEPENDENCIES
   angularjs-rails
   autoprefixer-rails
   bcrypt (~> 3.1.7)
+  bgg-api
   bootstrap-sass (~> 3.2.0)
   byebug
   capybara
