@@ -13,7 +13,7 @@ This application allows users of the site boardgamegeek.com to view their board 
 
 ---
 
-[Objectives](#objectives) | [Features](#features) | [User Stories](#user_stories) | [Wireframes](#wireframes) | [Styleguide](#styleguide) | Technologies (#technologies)
+[Objectives](#objectives) | [Features](#features) | [User Stories](#user_stories) | [Wireframes](#wireframes) | [Styleguide](#styleguide) | [Technologies](#technologies)
 
 ---
 
