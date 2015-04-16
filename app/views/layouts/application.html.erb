@@ -2,13 +2,19 @@
 <html>
 <head>
   <title>GameFinder</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <nav>
+    <% if session[:user_id] %>
+      <%= link_to "My Account", profile_path, class: "button" %>
+      <%= link_to "Log Out", logout_path, class: "button" %>
+    <% else %>
+      <%= link_to "Log In", login_path, class: "button" %>
+      <%= link_to "Sign Up", signup_path, class: "button" %>
+    <% end %>
+  </nav>
 <%= yield %>
-
 </body>
 </html>

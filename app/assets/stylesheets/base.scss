@@ -1,0 +1,73 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,900);
+
+$yellow: #f0e958;
+$black: #0c0c0c;
+$dkblue: #1a2f3e;
+$mdblue: #266da1;
+$paleblue: #d3e2e5;
+$red: #8b3439;
+$green: #216855;
+
+html {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+body {
+  color: $black;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+nav {
+  display: block;
+  background: $black;
+  text-align: right;
+  padding: 0.5em;
+}
+
+header {
+  margin-top: 1em;
+  margin-bottom: 3em;
+}
+
+a {
+  color: $mdblue;
+  border-bottom: 2px dotted $yellow;
+  text-decoration: none;
+  transition: color 0.5s linear, border-color 0.5s linear;
+}
+
+a:hover {
+  color: $dkblue;
+  border-color: $dkblue;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.button, button, input[type="submit"] {
+  border: 0;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: white;
+  background: $mdblue;
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  margin: 0 0.5em;
+  transition: background 0.1s linear,color 0.1s linear;
+}
+
+.button.active, button.active, .button:hover, button:hover, input[type="submit"]:hover {
+  background: $yellow;
+  color: $dkblue;
+}
+
+.button.active, button.active {
+  border: 1px solid $yellow;
+}
