@@ -45,6 +45,7 @@ GEM
     bgg-api (0.0.2)
       httparty
       xml-simple
+    bgg-parser (0.0.1)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.2.0.1)
@@ -130,6 +131,8 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-rails (0.3.4)
+      pry (>= 0.9.10)
     rack (1.6.0)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -251,6 +254,7 @@ DEPENDENCIES
   autoprefixer-rails
   bcrypt (~> 3.1.7)
   bgg-api
+  bgg-parser (~> 0.0.1)
   bootstrap-sass (~> 3.2.0)
   byebug
   capybara
@@ -264,6 +268,7 @@ DEPENDENCIES
   jquery-rails
   pg
   pry
+  pry-rails
   rails (= 4.2.1)
   rails_12factor
   rspec-rails (~> 3.0)

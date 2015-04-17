@@ -11,6 +11,7 @@ This application allows users of the site boardgamegeek.com to view their board 
 
 ### Summary: This project helps people who play board games quickly find new board games to play.
 
+### The client codebase can be found [here](https://github.com/cbus-sea-lions-2015/GameFinder-Client).
 ---
 
 [Objectives](#objectives) | [Features](#features) | [User Stories](#user_stories) | [Wireframes](#wireframes) | [Styleguide](#styleguide) | [Technologies](#technologies)
