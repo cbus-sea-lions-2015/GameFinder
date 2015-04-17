@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
   skip_before_action :authenticate, only: [:index, :new, :create]
+
   def index
-    @users = User.all
+    # users = User.all
+    # render json: users, status: 200
   end
 
   def new
@@ -11,45 +13,18 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      session[:user_id] = @user.id
-      redirect_to profile_path, notice: 'Account was successfully created.'
-    else
-      render :new
+      render json: {'token' => @user.auth_token}.to_json
     end
-  end
-
-  def edit
-    @user = User.find(session[:user_id])
-  end
-
-  def update
-    @user = User.find(session[:user_id])
-    if @user.update_attributes(profile_params)
-      redirect_to profile_path
-    else
-      render :edit
-    end
-  end
-
-  def destroy
-    @user = User.find(session[:user_id])
-    @user.destroy
-    session.delete(:user_id)
-    redirect_to root_path
   end
 
   def show
-    @user = User.find(session[:user_id])
+    render json: @user.to_json
   end
 
   private
 
-  def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation, :name)
-  end
-
-  def profile_params
-    params.require(:user).permit(:email, :password, :name, :phone, :handle, :bgg_username)
-  end
+    def user_params
+      params.require(:user).permit(:email, :password, :password_confirmation, :name)
+    end
 
 end
