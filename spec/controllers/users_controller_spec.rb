@@ -11,13 +11,6 @@ describe UsersController do
     end
   end
 
-  describe "GET #show" do
-    it "assigns the requested user as @user" do
-      get :show, {}, default_session
-      expect(assigns(:user)).to eq(user)
-    end
-  end
-
   describe "GET #new" do
     it "gets a new user" do
       get :new
@@ -32,19 +25,6 @@ describe UsersController do
           post :create, user: { email: 'dan@dan1.com', password: "1234" }
         }.to change{User.count}.by(1)
       end
-    end
-  end
-
-  describe "DELETE #destroy" do
-    it "redirects to the home page" do
-      delete :destroy, {}, default_session
-      expect(response).to redirect_to(root_path)
-    end
-
-    it "destroys the requested user" do
-      expect {
-        delete :destroy , {}, default_session
-      }.to change(User, :count).by(-1)
     end
   end
 
