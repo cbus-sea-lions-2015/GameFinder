@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
   skip_before_action :authenticate, only: [:index, :new, :create]
+
   def index
-    @users = User.all
+    users = User.all
+    render json: users, status: 200
   end
 
   def new
@@ -16,6 +18,10 @@ class UsersController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    # @user = User.find(session[:user_id])
   end
 
   def edit
@@ -38,18 +44,14 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
-  def show
-    @user = User.find(session[:user_id])
-  end
-
   private
 
-  def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation, :name)
-  end
+    def user_params
+      params.require(:user).permit(:email, :password, :password_confirmation, :name)
+    end
 
-  def profile_params
-    params.require(:user).permit(:email, :password, :name, :phone, :handle, :bgg_username)
-  end
+    def profile_params
+      params.require(:user).permit(:email, :password, :name, :phone, :handle, :bgg_username)
+    end
 
 end
