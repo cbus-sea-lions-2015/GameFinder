@@ -1,4 +1,4 @@
-class GamesController < ApplicationController
+class GamesController < SecuredController
   skip_before_action :authenticate
   def show
     game = Game.find(params[:id])
