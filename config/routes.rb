@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   get '/logout', to: 'sessions#destroy'
 
+  get '/games/:id', to: 'games#show'
+
   root to: 'users#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
