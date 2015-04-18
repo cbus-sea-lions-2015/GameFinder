@@ -1,7 +1,7 @@
 class CreateLibraries < ActiveRecord::Migration
   def change
     create_table :libraries do |t|
-      t.references :user, null: false
+      t.string :bgg_username
     end
   end
 end

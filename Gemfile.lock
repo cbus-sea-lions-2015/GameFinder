@@ -45,7 +45,7 @@ GEM
     bgg-api (0.0.2)
       httparty
       xml-simple
-    bgg-parser (0.0.1)
+    bgg-parser (0.0.4)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.2.0.1)
@@ -254,7 +254,7 @@ DEPENDENCIES
   autoprefixer-rails
   bcrypt (~> 3.1.7)
   bgg-api
-  bgg-parser (~> 0.0.1)
+  bgg-parser (~> 0.0.4)
   bootstrap-sass (~> 3.2.0)
   byebug
   capybara
