@@ -40,6 +40,8 @@ gem 'ionic-rails-engine'
 
 gem 'sidekiq'
 
+gem 'jwt'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
