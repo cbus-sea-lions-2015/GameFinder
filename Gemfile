@@ -40,6 +40,10 @@ gem 'ionic-rails-engine'
 
 gem 'sidekiq'
 
+gem 'jwt'
+
+gem 'rack-cors', :require => 'rack/cors'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
