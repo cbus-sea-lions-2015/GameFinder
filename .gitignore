@@ -13,3 +13,4 @@
 /tmp
 /db/schema.rb
 /coverage/*
+dump.rdb
