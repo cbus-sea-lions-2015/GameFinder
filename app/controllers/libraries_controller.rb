@@ -10,7 +10,7 @@ class LibrariesController < SecuredController
   end
 
   def create
-    bgg_user = params(:bgg_username)
+    bgg_user = params[:bgg_username]
     response = BggApi.new.collection({ username: bgg_user })
     if response.keys[0] != "error"
       UsersFetcher.perform_async(bgg_user)
