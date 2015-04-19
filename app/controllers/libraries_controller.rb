@@ -6,7 +6,6 @@ class LibrariesController < SecuredController
 
   def show
     all_games = Library.find_by(bgg_username: params[:id]).games
-    puts all_games.to_json
     render json: all_games.to_json
   end
 
