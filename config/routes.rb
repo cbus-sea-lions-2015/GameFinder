@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :libraries, only: [:show, :new, :create]
+  resources :libraries, only: [:show, :new, :create, :index]
   resources :users, only: [:index, :new, :create]
   resources :categories, only: [:index]
   resources :mechanics, only: [:index]
