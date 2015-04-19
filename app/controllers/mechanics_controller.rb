@@ -1,4 +1,4 @@
-class MechanicsController < ApplicationController
+class MechanicsController < SecuredController
   def index
     all_mechanics = Mechanic.all
     render json: all_mechanics.to_json
