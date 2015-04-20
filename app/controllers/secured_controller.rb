@@ -20,7 +20,7 @@ class SecuredController < ApplicationController
 
       auth0_id = ClaimsPrincipal.Current.FindFirst("user_id").Value
 
-      if User.find_by(auth0_id: auth0_id) = nil
+      if User.find_by(auth0_id: auth0_id) == nil
         name = ClaimsPrincipal.Current.FindFirst("name").Value
         email = ClaimsPrincipal.Current.FindFirst("email").Value
         User.create(auth0_id: auth0_id, name: name, email: email)
