@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe User do
-  let(:user) { User.new(email: "test@test.test", password: "1234") }
+  let(:user) { User.new(email: "test@test.test") }
 
   it "is a user" do
     expect(user).to be_a User
@@ -11,8 +11,5 @@ describe User do
     expect(user.email).not_to be nil
   end
 
-  it "has a password" do
-    expect(user.password).not_to be nil
-  end
 
 end
