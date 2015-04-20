@@ -5,8 +5,16 @@ class LibrariesController < SecuredController
   end
 
   def show
-    all_games = Library.find_by(bgg_username: params[:id]).games
-    render json: all_games.to_json
+    all_games = Library.find_by(bgg_username: params[:id]).games.includes(:categories,:mechanics)
+
+    json_games = all_games.map do |game|
+      JSON::parse(game.to_json).merge({
+        "mechanics"=> game.mechanics.map(&:name),
+        "categories"=> game.categories.map(&:name),
+      })
+    end
+    
+    render json: json_games.to_json
   end
 
   def create
