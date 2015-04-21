@@ -16,7 +16,16 @@ class UsersController < ApplicationController
   end
 
   def show
-    render json: @user.to_json
+    user = User.find(params[:id])
+    render json: user.to_json
+  end
+
+  def update
+    user = User.find(params[:id])
+    if user.update(params)
+      render json: user.to_json
+    else
+      render json: user.to_json
   end
 
 end

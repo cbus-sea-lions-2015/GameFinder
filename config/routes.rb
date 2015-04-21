@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :libraries, only: [:show, :new, :create, :index]
-  resources :users, only: [:index, :new, :create]
+  resources :users, only: [:index, :new, :create, :update]
   resources :categories, only: [:index]
   resources :mechanics, only: [:index]
   resource :sessions, only: [:new, :create, :destroy]
