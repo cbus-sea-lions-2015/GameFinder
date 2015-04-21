@@ -16,7 +16,14 @@ class UsersController < ApplicationController
   end
 
   def show
-    render json: @user.to_json
+    user = User.find(auth0_id: params[:auth0_id])
+    render json: user.to_json
+  end
+
+  def update
+    user = User.find_by(auth0_id: params[:auth0_id])
+    user.update(params)
+    render json: user.to_json
   end
 
 end
