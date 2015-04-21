@@ -3,7 +3,7 @@ class UsersFetcher
 
   def perform(bgg_username)
     library = Library.find_or_create_by(bgg_username: bgg_username)
-    bgg_user_library = BggApi.new.collection({ username: bgg_username })
+    bgg_user_library = BggApi.new.collection({ username: bgg_username, own:["1"] })
 
     existing_games_array = library.games.map { |game| game.bgg_id }
     collection_array = bgg_user_library["item"].map { |game| game["objectid"].to_i }
