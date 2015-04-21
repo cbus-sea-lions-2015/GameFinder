@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.find_or_create_by(auth0_id: params["token"])
+    user = User.find_or_initialize_by(auth0_id: params["token"])
     render json: user.to_json
   end
 
