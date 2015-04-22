@@ -18,10 +18,11 @@ class LibrariesController < SecuredController
   end
 
   def create
+    user = User.find_by(auth0_id: params['token'])
     bgg_user = params[:bgg_username]
     response = BggApi.new.collection({ username: bgg_user })
     if response.keys[0] != "error"
-      UsersFetcher.perform_async(bgg_user)
+      UsersFetcher.perform_async(bgg_user,user)
       message = 1
     else
       message = 0
