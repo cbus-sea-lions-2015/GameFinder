@@ -52,7 +52,7 @@ gem 'rack-cors', :require => 'rack/cors'
 
 
 # custom
-gem 'bgg-parser', '~> 0.0.4'
+gem 'bgg-parser', '~> 0.0.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
