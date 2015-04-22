@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class UsersController < SecuredController
   skip_before_action :authenticate, only: [:index, :new, :create]
 
   def index
