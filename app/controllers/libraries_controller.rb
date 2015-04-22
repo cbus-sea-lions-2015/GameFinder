@@ -23,7 +23,7 @@ class LibrariesController < SecuredController
     response = BggApi.new.collection({ username: bgg_user })
     if response.keys[0] != "error"
       library = Library.find_or_create_by(bgg_username: bgg_user)
-      UsersFetcher.perform_async(bgg_user,library.id)
+      UsersFetcher.perform_async(bgg_user)
       user.library_id = library.id
       user.save
       message = 1
