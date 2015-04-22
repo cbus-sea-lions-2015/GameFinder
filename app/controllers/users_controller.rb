@@ -13,7 +13,6 @@ class UsersController < ApplicationController
   def create
     user = User.find_or_initialize_by(auth0_id: params["token"])
     user.name = params["name"] if params["name"]
-    user.bgg_username = params["bgg_username"] if params["bgg_username"]
     user.save
     render json: user.to_json
   end
