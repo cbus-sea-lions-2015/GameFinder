@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150417174330) do
+ActiveRecord::Schema.define(version: 20150422152147) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,11 @@ ActiveRecord::Schema.define(version: 20150417174330) do
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.string "bgg_id", null: false
+  end
+
+  create_table "favoritelibraries", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "library_id"
   end
 
   create_table "games", force: :cascade do |t|
@@ -52,7 +57,7 @@ ActiveRecord::Schema.define(version: 20150417174330) do
   end
 
   create_table "libraries", force: :cascade do |t|
-    t.integer "user_id"
+    t.string "bgg_username"
   end
 
   create_table "mechanics", force: :cascade do |t|
@@ -61,17 +66,13 @@ ActiveRecord::Schema.define(version: 20150417174330) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",           limit: 255, null: false
-    t.string   "password_digest", limit: 255, null: false
-    t.string   "name",            limit: 255
-    t.string   "phone",           limit: 16
-    t.string   "handle",          limit: 255
-    t.string   "bgg_username",    limit: 255
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.string   "auth_token"
+    t.string   "name",       limit: 255
+    t.string   "phone",      limit: 16
+    t.string   "handle",     limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "auth0_id"
+    t.integer  "library_id"
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", using: :btree
 
 end
