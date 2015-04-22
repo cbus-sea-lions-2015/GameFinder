@@ -13,7 +13,7 @@ class LibrariesController < SecuredController
         "categories"=> game.categories.map(&:name),
       })
     end
-    
+
     render json: json_games.to_json
   end
 
@@ -22,9 +22,9 @@ class LibrariesController < SecuredController
     response = BggApi.new.collection({ username: bgg_user })
     if response.keys[0] != "error"
       UsersFetcher.perform_async(bgg_user)
-      message = "This library is currently being imported. This typically takes moments to complete, however larger libraries may take 15-30 minutes to populate."
+      message = 1
     else
-      message = "That library does not exist."
+      message = 0
     end
     render json: message.to_json
   end
