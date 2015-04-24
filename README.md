@@ -14,7 +14,7 @@ This application allows users of the site boardgamegeek.com to view their board 
 ### The client codebase can be found [here](https://github.com/cbus-sea-lions-2015/GameFinder-Client).
 ---
 
-[Objectives](#objectives) | [Features](#features) | [User Stories](#user_stories) | [Wireframes](#wireframes) | [Styleguide](#styleguide) | [Technologies](#technologies)
+[Objectives](#objectives) | [Features](#features) | [User Stories](#user_stories) | [Technologies](#technologies)
 
 ---
 
@@ -41,10 +41,6 @@ This application allows users of the site boardgamegeek.com to view their board 
     - search for games in many libraries
     - view my search history
     - get a recommendation on a new game
-
-### <a name="wireframes"></a>Wireframes
-
-### <a name="styleguide"></a>StyleGuide
 
 ### <a name="technologies"></a>Technologies
   - Ruby on Rails
