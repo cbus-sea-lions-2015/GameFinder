@@ -1,7 +1,6 @@
 # GameFinder
 
 [![Build Status](https://travis-ci.org/cbus-sea-lions-2015/GameFinder.svg?branch=master)](https://travis-ci.org/cbus-sea-lions-2015/GameFinder)
-[![Coverage Status](https://coveralls.io/repos/cbus-sea-lions-2015/GameFinder/badge.svg)](https://coveralls.io/r/cbus-sea-lions-2015/GameFinder)
 
 People who play board games are constantly searching for new games to play. Because there are thousands of board games in existence, searching for one that fits the current group size and interests can be a challenge.
 
